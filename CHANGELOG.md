@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+#### Changes in version 2.0.1:
+
+* Starting script development in Python
+
 #### Changes in version 2.0.0:
 
 * Added support for Symfony 3.* && Symfony 4.*

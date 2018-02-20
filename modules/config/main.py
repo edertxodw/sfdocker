@@ -17,11 +17,14 @@ def restart_config():
     if os.path.isfile(CONFIG_FILE_PATH):
         with open(CONFIG_FILE_PATH, 'w') as file:
             file.write('')
+        set_configuration()
 
 
 def is_config_file_empty():
     config_parser.read(CONFIG_FILE_PATH)
-    if os.stat(CONFIG_FILE_PATH).st_size == 0:
+    if not os.path.isfile(CONFIG_FILE_PATH):
+        return True
+    elif os.stat(CONFIG_FILE_PATH).st_size == 0:
         return True
 
     return False
