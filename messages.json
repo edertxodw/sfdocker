@@ -1,5 +1,6 @@
 {
-  "no_args": "You must indicate at least one argument",
+  "no_args": "You must indicate at least one argument, madafaka!",
+  "bye": "See you soon!",
   "symfony_version": {
     "question": "Choose your application's Symfony version (2/3/4): ",
     "invalid_option": "Invalid option. Come on! It's not that hard ... (╯°-°）╯︵ ┻━┻"
