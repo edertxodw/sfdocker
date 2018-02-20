@@ -1,0 +1,13 @@
+{
+  "no_args": "You must indicate at least one argument",
+  "symfony_version": {
+    "question": "Choose your application's Symfony version (2/3/4): ",
+    "invalid_option": "Invalid option. Come on! It's not that hard ... (╯°-°）╯︵ ┻━┻"
+  },
+  "default_container": {
+    "question": "Default container name (i.e.: my-container-php-fpm): "
+  },
+  "default_user": {
+    "question": "Default user name (i.e.: www-data): "
+  }
+}

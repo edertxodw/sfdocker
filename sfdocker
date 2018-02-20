@@ -1,0 +1,34 @@
+#!/usr/bin/env python
+
+# Imports #
+import sys
+# Our modules import #
+from modules.config import main as config
+import modules.colors as colors
+
+CONSOLE_PATH = 'app/console'
+
+if len(sys.argv) < 2:
+    print colors.ERROR + config.MESSAGES['no_args'] + colors.ENDC
+    sys.exit(0)
+
+if sys.argv[1] == 'config':
+    config.restart_config()
+
+if config.is_config_file_empty():
+    config.set_configuration()
+    config_file_content = config.read_config_file()
+    SYMFONY_VERSION = config_file_content[0]
+    CONTAINER = config_file_content[1]
+    DEFAULT_USER = config_file_content[2]
+else:
+    config_file_content = config.read_config_file()
+    SYMFONY_VERSION = config_file_content[0]
+    CONTAINER = config_file_content[1]
+    DEFAULT_USER = config_file_content[2]
+
+if int(SYMFONY_VERSION) == 4 or int(SYMFONY_VERSION) == 3:
+    CONSOLE_PATH = 'bin/console'
+
+if sys.argv[1] == 'kaixo':
+    print CONSOLE_PATH
